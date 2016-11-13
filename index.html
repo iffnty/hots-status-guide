@@ -113,7 +113,7 @@ html,body,#wrapper{font-size:10pt!important;}
 <td style="text-align:center;"> Yes<sup>2</sup> </td>
 <td style="text-align:center;"> No </td>
 <td style="text-align:center;"> No </td>
-<td style="text-align:center;"> Yes<sup>3</sup> </td>
+<td style="text-align:center;"> Some<sup>3</sup> </td>
 <td style="text-align:center;"> No </td>
 </tr>
 <tr>
@@ -163,7 +163,7 @@ html,body,#wrapper{font-size:10pt!important;}
 <ol>
 <li>Although damage is blocked, some talents that rely on auto-attacks (often quest talents) may still be activated by the act of attacking. This behaviour may be intended or it may be a bug.</li>
 <li>More precisely, it alters enemy&rsquo;s movement direction or position</li>
-<li>Interruption of channeled abilities may be affected by bugs</li>
+<li>Knockback/displacement effect interrupts only those channeled abilities that immobilize the hero casting them, like E.T.C.&rsquo;s Mosh Pit or Nazeebo&rsquo;s Ravenous Spirit. It does not interrupt channeled abilities during which a hero can move, like Li Li&rsquo;s Jug of 1,000 Cups</li>
 <li>Interruption and targeting effects depend on the ability. More details in the following Stasis section.</li>
 <li>Unique to certain heroes </br><br/>
 <code>*</code> Confirmation required</li>
@@ -214,7 +214,7 @@ html,body,#wrapper{font-size:10pt!important;}
 <p>Silence is the second most powerful basic CC effect because a lot of heroes rely on their abilities to deal damage, escape death after a deep dive into the enemy lines or support their allies.<br/>
 Because silence ticks less boxes than stun and almost always is a heroic ability (with the exception of Alarak&rsquo;s Discord Strike basic ability), it is usually an AOE spell and has longer duration than stuns.</p>
 
-<p>Silence effect in its pure form is available to these heroes:</p>
+<p>Silence effect is also a part of Polymorph debuff, but in its pure form is available to these heroes:</p>
 
 <table>
 <thead>
@@ -226,6 +226,12 @@ Because silence ticks less boxes than stun and almost always is a heroic ability
 </tr>
 </thead>
 <tbody>
+<tr>
+<td> Dehaka </td>
+<td style="text-align:center;"> Warrior </td>
+<td style="text-align:center;"> Isolation </td>
+<td style="text-align:center;"> Heroic </td>
+</tr>
 <tr>
 <td> Alarak </td>
 <td style="text-align:center;"> Assassin </td>
@@ -395,7 +401,7 @@ Because silence ticks less boxes than stun and almost always is a heroic ability
 
 <h4 id="polymorph">Polymorph</h4>
 
-<p>Polymorph is the combination of two basic negative status effects, namely Silence and Blind. Polymorphed enemies cannot auto-attack and use their abilities, but can move and be targeted with damage and heals.</p>
+<p>Polymorph is the combination of two basic negative status effects, namely Silence and Blind. Polymorphed enemies cannot auto-attack (a slightly more powerful definition than Blind) and use their abilities, but can move and be targeted with damage and heals.</p>
 
 <p>As of November 2016, only two heroes have polymorphing ability in their kit:</p>
 
@@ -496,7 +502,7 @@ Because silence ticks less boxes than stun and almost always is a heroic ability
 
 <ul>
 <li><p>Arthas' Summon Sindragosa and Sylvanas' Black Arrows disable enemy&rsquo;s minions, mercenaries and structures (except for Core and bosses). Affected targets stop firing at your allied heroes, minions, mercenaries or bosses.</p></li>
-<li><p>Chromie&rsquo;s Time Trap and Zeratul&rsquo;s Void Prison stop time. Affected target&rsquo;s cannot move, cast abilities or receive any damage or healing and their cooldowns stop refreshing during the duration of stasis. However, buffs and channeled abilities are not interrupted and continue after stasis effect wears off. Affected heroes are also targetable, so the stasis effect can be removed from them with Cleanse.</p>
+<li><p>Chromie&rsquo;s Time Trap, Medivh&rsquo;s Ley Line Seal and Zeratul&rsquo;s Void Prison stop time. Affected target&rsquo;s cannot move, cast abilities or receive any damage or healing and their cooldowns stop refreshing during the duration of stasis. However, buffs and channeled abilities are not interrupted and continue after stasis effect wears off. Affected heroes are also targetable, so the stasis effect can be removed from them with Cleanse.</p>
 
 <p>  Zeratul&rsquo;s Void Prison also affects allies (if level 20 upgrade, Protective Prison, is not taken) and buildings which means in some cases you can cast VP on your allies or even your Core to block any damage targeted at them. However, Zeratul himself is not affected by his VP and can receive damage even when being inside the VP bubble.</p></li>
 <li><p>Anub'arak&rsquo;s Cocoon, Stitches' Gorge and Zagara&rsquo;s Devouring Maw remove affected heroes from the game for a short duration. Affected heroes become untargetable (cannot receive damage or healing) and their channeled abilities are interrupted.</p>
@@ -507,9 +513,9 @@ Because silence ticks less boxes than stun and almost always is a heroic ability
 </ul>
 
 
-<h4 id="mind-control--fear-and-holy-ground">Mind Control, Fear and Holy Ground</h4>
+<h4 id="mind-control--fear-and-holy-ground">Special effects</h4>
 
-<p>These CC effects are unique to certain heroes.</p>
+<p>Some CC effects are unique to certain heroes.</p>
 
 <p><strong>Mind Control</strong> is the effect of Sylvanas' Mind Control heroic ability. It allows Sylvanas' player to control movements of the affected enemy hero who also cannot cast abilities while being mind controlled. Mind Control also interrupts channeled abilities like E.T.C.&rsquo;s Mosh Pit or Li Li's Jug of 1,000 Cups. However, Sylvanas cannot move stunned or otherwise immobile targets (like Sgt. Hammer in siege mode) with Mind Control.</p>
 
@@ -643,7 +649,7 @@ Because silence ticks less boxes than stun and almost always is a heroic ability
 
 
 <ol>
-<li>One peculiar thing about the “terrain collision” condition is that “terrain” really means “an impassable object”. So, for example, Auriel&rsquo;s or Diablo&rsquo;s knockbacks will stun enemy that collides with abilities that either specify terms like “blocks” or “unpathable” in their description (Tyrael&rsquo;s Holy Ground, Sgt. Hammer&rsquo;s Barricade, Tassadar&rsquo;s Force Wall, Leoric&rsquo;s Entomb etc.) as well as some other abilities (Tychus&rsquo; Drakken Laser Drill, Nazeebo&rsquo;s Zombie Wall etc.) </li>
+<li>One peculiar thing about the “terrain collision” condition is that “terrain” really means “an impassable object”. So, for example, Auriel&rsquo;s or Diablo&rsquo;s knockbacks will stun enemy that collides with abilities that either specify terms like “blocks”, “impassable” or “unpathable” in their description (Tyrael&rsquo;s Holy Ground, Sgt. Hammer&rsquo;s Barricade, Tassadar&rsquo;s Force Wall, Leoric&rsquo;s Entomb etc.) as well as some other abilities (Tychus&rsquo; Drakken Laser Drill, Nazeebo&rsquo;s Zombie Wall etc.) </li>
 </ol>
 
 
@@ -742,11 +748,15 @@ Because silence ticks less boxes than stun and almost always is a heroic ability
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;"> Brightwing </br> Kharazim </br> Li Li </br> Lt. Morales </br> Malfurion </br> Rehgar </br> Uther </td>
+<td style="text-align:center;"> Brightwing </br> Kharazim<sup>1</sup> </br> Li Li </br> Lt. Morales </br> Malfurion </br> Rehgar </br> Uther </td>
 <td style="text-align:center;"> Auriel </br> Tassadar </br> Tyrande </td>
 </tr>
 </tbody>
 </table>
+
+<ol>
+<li>May lose Cleanse in the upcoming patch. The guide will be updated accordingly</li>
+</ol>
 
 
 <p>One limitation of Cleanse is that it cannot be casted on yourself.</p>
@@ -799,7 +809,7 @@ Because silence ticks less boxes than stun and almost always is a heroic ability
 
 <p>Some heroes can either have a very short period of Unstoppable effect on their abilities (like Sylvanas teleporting by reactivating her Haunting Wave ability) or sometimes even “undocumented” Unstoppable effect during ability animation. These brief “frames” can be used to dodge a displacement ability or stun.</p>
 
-<p>A rather simple to reproduce example goes as follows: if Sylvanas who affected by Chromie&rsquo;s Temporal Loop heroic ability times her Haunting Wave teleport so that she&rsquo;s between her original and target locations when Temporal Loop teleport effect should&rsquo;ve taken place, she will not be teleported back to the TL cast place but will arrive to her HW destination point instead. Demonstration: <a href="https://gfycat.com/FlashyGorgeousIrishwolfhound">“Wave the Loop” by Fellewin</a></p>
+<p>A rather simple to reproduce example goes as follows: if Sylvanas who affected by Chromie&rsquo;s Temporal Loop heroic ability times her Haunting Wave teleport so that she&rsquo;s between her original and target locations when Temporal Loop teleport effect should&rsquo;ve taken place, she will not be teleported back to the TL cast place but will arrive to her HW destination point instead. Demonstration: <a href="https://gfycat.com/FlashyGorgeousIrishwolfhound">“Wave the Loop” by Felewin</a></p>
 
 
 <p>History lesson: back in the times when Muradin had Unstoppable frames during Dwarf Toss basic ability animation, players was using DT paired with Heavy Impact talent to interrupt enemy E.T.C.&rsquo;s Mosh Pit.</p>
@@ -825,7 +835,7 @@ Because silence ticks less boxes than stun and almost always is a heroic ability
 
 
 <ol>
-<li>Unstoppable effect remain after Zeratul&rsquo;s Void Prison and Chromie&rsquo;s Time Trap but wears off after Zagara&rsquo;s Devouring Maw</li>
+<li>Unstoppable effect remain after Void Prison, Ley Line Seal and Time Trap but wears off after Devouring Maw</li>
 </ol>
 
 
